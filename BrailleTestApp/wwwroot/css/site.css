@@ -1,0 +1,30 @@
+html {
+  font-size: 14px;
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.display-4 {
+    margin-top: 136px;
+    font-size: 76px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.display-5 {
+    font-size: 16px;
+    
+    color: aliceblue;
+}
+
+
+body {
+    margin-bottom: 60px;
+    background-image: url("5297078.jpg");
+    background-position: center;
+    background-size: 1500px 900px;
+}

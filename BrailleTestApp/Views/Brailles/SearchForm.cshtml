@@ -1,0 +1,25 @@
+﻿
+
+<h4>Search for characters/shapes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SearchForm"> <!-- action-->
+            
+            <div class="form-group">
+                <label for="SearchedShape" class="control-label"></label>
+                <input name="SearchedShape" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Enter" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
