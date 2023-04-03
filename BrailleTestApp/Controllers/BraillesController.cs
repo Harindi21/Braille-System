@@ -41,6 +41,24 @@ namespace BrailleTestApp.Controllers
             return View();
         }
 
+        //GET: Brailles/About
+        public async Task<IActionResult> About()
+        {
+            return View();
+        }
+
+        //GET: Brailles/Profile
+        public async Task<IActionResult> Profile()
+        {
+            return View();
+        }
+
+        //GET: Brailles/faqs
+        public async Task<IActionResult> faqs()
+        {
+            return View();
+        }
+
         //im making some code to get searchresults
         // POST: Brailles/SearchResults
         public async Task<IActionResult> SearchResult(String SearchedShape)
