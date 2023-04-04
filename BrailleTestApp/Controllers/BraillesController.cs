@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using BrailleTestApp.Data;
 using BrailleTestApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using BrailleTestApp;
+using System.Drawing;
 
 namespace BrailleTestApp.Controllers
 {
@@ -60,10 +62,13 @@ namespace BrailleTestApp.Controllers
         }
 
         //im making some code to get searchresults
+        //here need to show the braille pattern for the entered shape/character
         // POST: Brailles/SearchResults
         public async Task<IActionResult> SearchResult(String SearchedShape)
         {
-            return View("Index", await _context.Braille.Where(j => j.Pattern.Contains(SearchedShape)).ToListAsync());
+            pattern ob = new pattern();
+            string DotPattern = ob.GeneratePattern(SearchedShape);
+            return View("SearchResult", DotPattern);
         }
 
         // GET: Brailles/Details/5
