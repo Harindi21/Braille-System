@@ -1,19 +1,84 @@
-<br />
-<h4>Search for characters/shapes</h4>
+<h4>Search for Braille Dot Patterns</h4>
 <hr />
-<div class="row">
+<h5>Search for Shapes</h5>
+
+<!-- drop down list for shapes-->
+<div class="row1">
     <div class="col-md-4">
-        <form asp-action="SearchForm"> <!-- action-->
-            
+        <form asp-action="SearchResult" name="frm1 "id="shapeForm">
+            <!-- action-->
             <div class="form-group">
-              <br />  
-                <input name="SearchedShape" class="form-control" />
+                <select size="6" name="ShapeList" class="form-control" id="myDropDownList1">
+                    <option value="Circle">Circle</option>
+                    <option value="Square">Square</option>
+                    <option value="Rectangle">Rectangle</option>
+                </select>
             </div>
-              <br />
+        
+            <!-- shape-specific input fields -->
+            <div>
+                <label>Radius:</label>
+                <input id="CircleRadius" name="Radius" type="number" class="form-control" />
+            </div>
+            <div >
+                <label>Side Length:</label>
+                <input id="SquareLength" name="SideLength" type="number" class="form-control" />
+            </div>
+            <div>
+                <label>Length:</label>
+                <input id="RectangleLength" name="Length" type="number" class="form-control" />
+            </div>
+            <div >
+                <label>Height:</label>
+                <input id="RectangleHeight" name="Height" type="number" class="form-control" />
+            </div>
+
+            <!-- submit button-->
             <div class="form-group">
                 <input type="submit" value="Search" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
+
+<!-- drop down list for characters-->
+<div class="row2">
+    <div class="col-md-4">
+        <form asp-action="SearchResult" id="characterForm">
+            <!-- action-->
+            <div class="form-group">
+                <select size="12" name="CharacterList" class="form-control" id="myDropDownList2">
+                    <option value="A">A</option>
+                    <option value="a">a</option>
+                    <option value="B">B</option>
+                    <option value="b">b</option>
+                    <option value="C">C</option>
+                    <option value="c">c</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+            <!-- submit button-->
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- input field for characters-->
+<div class="row3">
+    <div class="col-md-4">
+        <form asp-action="SearchResult">
+            <div class="form-group">
+                <input id="inputtext" name="inputtext"  class="form-control" />
+            </div>
+            <!-- submit button-->
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div><!-- including  JavaScript file -->
+<script src="~/js/shapeParamters.js"></script>
+
 
