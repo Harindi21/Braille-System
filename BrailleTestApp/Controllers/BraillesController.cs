@@ -25,9 +25,9 @@ namespace BrailleTestApp.Controllers
         // GET: Brailles
         public async Task<IActionResult> Index()
         {
-              return _context.Braille != null ? 
-                          View(await _context.Braille.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Braille'  is null.");
+            return _context.Braille != null ?
+                        View(await _context.Braille.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Braille'  is null.");
         }
         //some code to search braille
         //GET: Brailles/SearchForm
@@ -64,10 +64,27 @@ namespace BrailleTestApp.Controllers
         //im making some code to get searchresults
         //here need to show the braille pattern for the entered shape/character
         // POST: Brailles/SearchResults
-        public async Task<IActionResult> SearchResult(String SearchedShape)
+        public async Task<IActionResult> SearchResult(String ShapeList, String CharacterList, String LongTextInput, String Radius, String SideLength, String Length, String Height)
         {
             pattern ob = new pattern();
-            string DotPattern = ob.GeneratePattern(SearchedShape);
+            string DotPattern = "";
+
+            //shape
+            if (!string.IsNullOrEmpty(ShapeList))
+            {
+                DotPattern = ob.GeneratePatternForShape(ShapeList,Radius,Length,Height,SideLength);
+            }
+
+            else if (!string.IsNullOrEmpty(CharacterList))
+            {
+                // generate pattern for the selected character from the list
+                DotPattern = ob.GeneratePatternForCharacters(CharacterList);
+            }
+            else
+            {
+                // generate pattern for entered text 
+                DotPattern = ob.GeneratePatternForCharacters(LongTextInput);
+            }
             return View("SearchResult", DotPattern);
         }
 
@@ -200,14 +217,14 @@ namespace BrailleTestApp.Controllers
             {
                 _context.Braille.Remove(braille);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool BrailleExists(int id)
         {
-          return (_context.Braille?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Braille?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
