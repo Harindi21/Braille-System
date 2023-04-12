@@ -64,28 +64,26 @@ namespace BrailleTestApp.Controllers
         //im making some code to get searchresults
         //here need to show the braille pattern for the entered shape/character
         // POST: Brailles/SearchResults
-        public async Task<IActionResult> SearchResult(String ShapeList, String CharacterList, String LongTextInput, String Radius, String SideLength, String Length, String Height)
+        public IActionResult SearchResult(String ShapeList, String CharacterList, String LongTextInput, String Radius, String SquareSideLength, String Length, String Height, String Tr1, String Tr2, String Tr3, String PentagonSideLength, String HeptagonSideLength, String HexagonSideLength, String OctagonSideLength, String NonagonSideLength, String Pl1, String Pl2, String Pl3, String Pl4, String Tz1, String Tz2, String Tz3, String Tz4, String Rh1, String Rh2, String Rh3, String Rh4, String Ql1, String Ql2, String Ql3, String Ql4)
         {
-            pattern ob = new pattern();
+            Pattern ob = new Pattern();
             string DotPattern = "";
 
-            //shape
             if (!string.IsNullOrEmpty(ShapeList))
             {
-                DotPattern = ob.GeneratePatternForShape(ShapeList,Radius,Length,Height,SideLength);
+                DotPattern = ob.GeneratePatternForShape(ShapeList, Radius, Length, Height, SquareSideLength, Tr1, Tr2, Tr3, PentagonSideLength, HexagonSideLength, HeptagonSideLength, OctagonSideLength, NonagonSideLength, Pl1, Pl2, Pl3, Pl4, Tz1, Tz2, Tz3, Tz4, Rh1, Rh2, Rh3, Rh4, Ql1, Ql2, Ql3, Ql4);
             }
-
             else if (!string.IsNullOrEmpty(CharacterList))
             {
-                // generate pattern for the selected character from the list
                 DotPattern = ob.GeneratePatternForCharacters(CharacterList);
             }
             else
             {
-                // generate pattern for entered text 
                 DotPattern = ob.GeneratePatternForCharacters(LongTextInput);
             }
-            return View("SearchResult", DotPattern);
+
+            ViewData["DotPattern"] = DotPattern;
+            return View("SearchResult");
         }
 
         // GET: Brailles/Details/5
@@ -105,6 +103,7 @@ namespace BrailleTestApp.Controllers
 
             return View(braille);
         }
+
 
         // GET: Brailles/Create
         [Authorize]
