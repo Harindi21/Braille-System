@@ -1,0 +1,32 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "SearchResult";
+}
+<html>
+<h1>Braille character sequence  </h1>
+<br />
+<head>
+
+    <style>
+        .red-text {
+            font-size: 12px;
+          
+        }
+    </style>
+</head>
+<body>
+   <br />
+
+    <div>@Html.Raw(Model)</div>
+
+        @if (!string.IsNullOrEmpty(ViewData["DotPattern"] as string))
+        {
+        <pre style="font-family: Arial, sans-serif; font-size: 99px; ">@Html.Raw(ViewData["DotPattern"] as string)</pre>
+        }
+   
+</body>
+</html>
+
+<!--output is  displayed in monospaced font as the text is wrapped with <code> or <pre> elements-->
+<!--Dont remove pre tags otherwise perimeter and pattern wont display in two lines-->
