@@ -61,7 +61,7 @@ namespace BrailleTestApp.Controllers
             return View();
         }
 
-        //im making some code to get searchresults
+        //I'm making some code to get searchresults
         //here need to show the braille pattern for the entered shape/character
         // POST: Brailles/SearchResults
         public IActionResult SearchResult(String ShapeList, String CharacterList, String LongTextInput, String Radius, String SquareSideLength, String Length, String Height, String Tr1, String Tr2, String Tr3, String PentagonSideLength, String HeptagonSideLength, String HexagonSideLength, String OctagonSideLength, String NonagonSideLength, String Pl1, String Pl2, String Pl3, String Pl4, String Tz1, String Tz2, String Tz3, String Tz4, String Rh1, String Rh2, String Rh3, String Rh4, String Ql1, String Ql2, String Ql3, String Ql4)
