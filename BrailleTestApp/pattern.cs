@@ -328,128 +328,129 @@ namespace BrailleTestApp
             string pattern = "";
             if(name=="Circle")
             {
-                pattern += "⠫⠿\n";
+                pattern += "⠫⠿";
                 double p = 2 * 3.41 * Convert.ToDouble(radius);
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString()+"\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
 
-                return pattern+p2+ FinalCountSt;
+                return pattern+"\n"+p2+ FinalCountSt;
 
             }
             if (name == "Square")
             {
-                pattern = " ⠫⠼⠙\n";
+                pattern = "⠫⠼⠙";
                 double p = Convert.ToDouble(sideLength)*4;
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
 
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" +p2 + FinalCountSt;
 
             }
             if (name == "Rectangle")
             {
-                pattern = "⠫⠊\n";
+                pattern = "⠫⠊";
                 double p = (Convert.ToDouble(length) * 2)+ (Convert.ToDouble(height) * 2);
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n"+p2 + FinalCountSt;
 
             }
 
             if (name == "Triangle")
             {
-                pattern += "⠫⠼⠉\n";
+                pattern += "⠫⠼⠉";
                 double p = (Convert.ToDouble(tr1)) + (Convert.ToDouble(tr2)) + (Convert.ToDouble(tr3));
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
 
             if (name == "Pentagon")
             {
-                pattern += "⠫⠼⠑\n";
+                //when I put pattern += " ⠫⠼⠑\n"; it didnt generate the correct amount if dots. Omitted both space and \n. Then it worked
+                pattern += "⠫⠼⠑";
                 double p = (Convert.ToDouble(pentL))*5;
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
             if (name == "Hexagon")
             {
-                pattern += "⠫⠼⠋\n";
+                pattern += "⠫⠼⠋";
                 double p = (Convert.ToDouble(hexL)) * 6;
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
             if (name == "Heptagon")
             {
-                pattern += "⠫⠼⠛\n";
+                pattern += "⠫⠼⠛";
                 double p = (Convert.ToDouble(heptL))*7;
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
             if (name == "Octagon")
             {
-                pattern += "⠫⠼⠓\n";
+                pattern += "⠫⠼⠓";
                 double p = (Convert.ToDouble(octL))*8;
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
 
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
             if (name == "Nonagon")
             {
-                pattern += "⠫⠔\n";
+                pattern += "⠫⠔";
                 double p = (Convert.ToDouble(nongL))*9;
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
 
-                return pattern +p2+ FinalCountSt;
+                return pattern + "\n"+p2+ FinalCountSt;
 
             }
             if (name == "Trapezoid")
             {
-                pattern += "⠫⠵\n";
+                pattern += "⠫⠵";
                 double p = (Convert.ToDouble(Tz1))+ (Convert.ToDouble(Tz2)) + (Convert.ToDouble(Tz3)) + (Convert.ToDouble(Tz4));
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
 
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
             if (name == "Rhombus")
             {
-                pattern += "⠫⠓\n";
+                pattern += "⠫⠓";
                 double p = (Convert.ToDouble(Rh1)) + (Convert.ToDouble(Rh2)) + (Convert.ToDouble(Rh3)) + (Convert.ToDouble(Rh4));
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
 
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
             if (name == "Parallelogram")
             {
-                pattern += "⠫⠛\n";
+                pattern += "⠫⠛";
                 double p = (Convert.ToDouble(Pl1)) + (Convert.ToDouble(Pl2)) + (Convert.ToDouble(Pl3)) + (Convert.ToDouble(Pl4));
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
 
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
             if (name == "Quadrilateral")
             {
-                pattern += "⠫⠟\n";
+                pattern += "⠫⠟";
                 double p = (Convert.ToDouble(Ql1)) + (Convert.ToDouble(Ql2)) + (Convert.ToDouble(Ql3)) + (Convert.ToDouble(Ql4));
                 string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
                 string FinalCountSt = "<span class='red-text' style='display: block; margin-bottom: 1em;'>" + DotCounter(pattern) + "</span>";
-                return pattern + p2 + FinalCountSt;
+                return pattern + "\n" + p2 + FinalCountSt;
 
             }
             else return "unknown";
