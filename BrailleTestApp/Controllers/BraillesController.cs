@@ -58,7 +58,34 @@ namespace BrailleTestApp.Controllers
         //GET: Brailles/faqs
         public async Task<IActionResult> faqs()
         {
-            return View();
+            var model = new FAQViewModel
+            {
+                Questions = new List<FAQItem>
+            {
+                new FAQItem
+                {
+                    Title = "What is Braille?",
+                    Answer = "A way of writting the language for blind people, where the characters are represented by specific dot patterns and they can touch and feel the pattern with their fingertips."
+                },
+                new FAQItem
+                {
+                    Title = "Is Braille will differ from?",
+                    Answer = "Yes! Here you we have used English Braille."
+                },
+                 new FAQItem
+                {
+                    Title = "How can they feel the Braille by using this system?",
+                    Answer = "Our system can be connected to a 3D printer where they can easily get the 3D pattern of dots."
+                },
+                 new FAQItem
+                {
+                    Title = "Can blind people use this system?",
+                    Answer = "Unfortunately, blind people cannot use this system yet! But we are figuring out a way to do it!",
+                },
+            }
+            };
+
+            return View(model);
         }
 
         //I'm making some code to get searchresults
