@@ -1,8 +1,8 @@
 function printPreview() {
-    document.getElementById("heading").style.display = "none";
+    //document.getElementById("heading").style.display = "none";
     window.print();
-    printButton.style.visibility = 'visible';
-    // function to print the current web page
+    //printButton.style.visibility = 'visible';
+    
 }
 
 function showHideFields() {
