@@ -82,6 +82,16 @@ namespace BrailleTestApp.Controllers
                     Title = "Can blind people use this system?",
                     Answer = "Unfortunately, blind people cannot use this system yet! But we are figuring out a way to do it!",
                 },
+                 new FAQItem
+                {
+                    Title = "Which language of Braille you've used in this system?",
+                    Answer = "It's English-Braille! We've used English-Braille because it's the most common one",
+                },
+                 new FAQItem
+                {
+                    Title = "Can we take printouts of both characters and shapes at once?",
+                    Answer = "No you only can print one at once! Sorry for that we will improve the performance in the future.",
+                },
             }
             };
 
