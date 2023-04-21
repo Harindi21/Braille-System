@@ -3,23 +3,24 @@
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-<h1>Here are some Frequently Asked Questions!</h1>
 
 @{
     ViewData["Title"] = "FAQ";
 }
 
-<h1>FAQ</h1>
+<h1>Here are some Frequently Asked Questions!</h1>
 
 @foreach (var question in Model.Questions)
 {
     <div class="question">
-        <h2>@question.Title</h2>
+        <p>@question.Title</p>
         <button class="toggle-answer">Show Answer</button>
         <div class="answer" style="display: none;">
-            @question.Answer
+            @question.Answer 
         </div>
+        
     </div>
+    <br />
 }
 
 @section Scripts {
