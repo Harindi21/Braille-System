@@ -29,6 +29,7 @@ namespace BrailleTestApp.Controllers
                         View(await _context.Braille.ToListAsync()) :
                         Problem("Entity set 'ApplicationDbContext.Braille'  is null.");
         }
+
         //some code to search braille
         //GET: Brailles/SearchForm
         public async Task<IActionResult> SearchForm()
@@ -36,7 +37,14 @@ namespace BrailleTestApp.Controllers
             return View();
         }
 
-        //some code to get braille for what searched
+        //some code to get perimeter for the shape searched;
+        //GET: Brailles/SearchPerimeter
+        public async Task<IActionResult> SearchPerimeter()
+        {
+            return View();
+        }
+
+        //some code to get braille for what searched;
         //GET: Brailles/SearchForm
         public async Task<IActionResult> SearchResults()
         {
@@ -58,57 +66,30 @@ namespace BrailleTestApp.Controllers
         //GET: Brailles/faqs
         public async Task<IActionResult> faqs()
         {
-            var model = new FAQViewModel
-            {
-                Questions = new List<FAQItem>
-            {
-                new FAQItem
-                {
-                    Title = "What is Braille?",
-                    Answer = "A way of writting the language for blind people, where the characters are represented by specific dot patterns and they can touch and feel the pattern with their fingertips."
-                },
-                new FAQItem
-                {
-                    Title = "Is Braille will differ from?",
-                    Answer = "Yes! Here you we have used English Braille."
-                },
-                 new FAQItem
-                {
-                    Title = "How can they feel the Braille by using this system?",
-                    Answer = "Our system can be connected to a 3D printer where they can easily get the 3D pattern of dots."
-                },
-                 new FAQItem
-                {
-                    Title = "Can blind people use this system?",
-                    Answer = "Unfortunately, blind people cannot use this system yet! But we are figuring out a way to do it!",
-                },
-                 new FAQItem
-                {
-                    Title = "Which language of Braille you've used in this system?",
-                    Answer = "It's English-Braille! We've used English-Braille because it's the most common one",
-                },
-                 new FAQItem
-                {
-                    Title = "Can we take printouts of both characters and shapes at once?",
-                    Answer = "No you only can print one at once! Sorry for that we will improve the performance in the future.",
-                },
-            }
-            };
+            return View();
+        }
 
-            return View(model);
+        public IActionResult Perimeter(String ShapeListp, String Radius, String SquareSideLength, String Length, String Height, String Tr1, String Tr2, String Tr3, String PentagonSideLength, String HeptagonSideLength, String HexagonSideLength, String OctagonSideLength, String NonagonSideLength, String Pl1, String Pl2, String Pl3, String Pl4, String Tz1, String Tz2, String Tz3, String Tz4, String Rh1, String Rh2, String Rh3, String Rh4, String Ql1, String Ql2, String Ql3, String Ql4)
+        {
+            Pattern obj = new Pattern();
+
+            string pr = obj.ShapePerimeters(ShapeListp, Radius, SquareSideLength, Length, Height, Tr1, Tr2, Tr3, PentagonSideLength, HeptagonSideLength, HexagonSideLength, OctagonSideLength, NonagonSideLength, Pl1, Pl2, Pl3, Pl4, Tz1, Tz2, Tz3, Tz4, Rh1, Rh2, Rh3, Rh4, Ql1, Ql2, Ql3, Ql4);
+
+            ViewData["pr"] = pr;
+            return View("Perimeter");
         }
 
         //I'm making some code to get searchresults
         //here need to show the braille pattern for the entered shape/character
         // POST: Brailles/SearchResults
-        public IActionResult SearchResult(String ShapeList, String CharacterList, String LongTextInput, String Radius, String SquareSideLength, String Length, String Height, String Tr1, String Tr2, String Tr3, String PentagonSideLength, String HeptagonSideLength, String HexagonSideLength, String OctagonSideLength, String NonagonSideLength, String Pl1, String Pl2, String Pl3, String Pl4, String Tz1, String Tz2, String Tz3, String Tz4, String Rh1, String Rh2, String Rh3, String Rh4, String Ql1, String Ql2, String Ql3, String Ql4)
+        public IActionResult SearchResult(String ShapeList, String CharacterList, String LongTextInput)
         {
             Pattern ob = new Pattern();
             string DotPattern = "";
 
             if (!string.IsNullOrEmpty(ShapeList))
             {
-                DotPattern = ob.GeneratePatternForShape(ShapeList, Radius, Length, Height, SquareSideLength, Tr1, Tr2, Tr3, PentagonSideLength, HexagonSideLength, HeptagonSideLength, OctagonSideLength, NonagonSideLength, Pl1, Pl2, Pl3, Pl4, Tz1, Tz2, Tz3, Tz4, Rh1, Rh2, Rh3, Rh4, Ql1, Ql2, Ql3, Ql4);
+                DotPattern = ob.GeneratePatternForShape(ShapeList);
             }
             else if (!string.IsNullOrEmpty(CharacterList))
             {
