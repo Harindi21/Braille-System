@@ -521,7 +521,7 @@ namespace BrailleTestApp
                 return p2;
             }
             else
-                return "unk"; 
+                return "unkown"; 
         }
     }
 }
