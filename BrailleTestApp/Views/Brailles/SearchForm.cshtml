@@ -1,15 +1,14 @@
 <html>
 <head>
-
 </head>
 <body>
-    <script language="JavaScript" src="~/js/shapeParamters.js"></script>
-
+   <!-- <script language="JavaScript" src="~/js/shapeParamters.js"></script>
+           No need to use a link when the js code is in site.js. It's possible that the site.js file is being loaded without an explicit reference in cshtml views.
+    it happens if the file is being loaded by another JavaScript file that is referenced in your views, / if it's being loaded by a layout file that is used by all the views in your application.
+   -->
     <h4>Search for Braille Dot Patterns</h4>
     <hr />
     <h5>Search for Shapes</h5>
-
-    <!-- drop down list for shapes-->
     <div class="row1">
         <div class="col-md-4">
             <form asp-action="SearchResult">
@@ -29,176 +28,10 @@
                         <option value="Trapezoid">Trapezoid</option>
                         <option value="Rhombus">Rhombus</option>
                         <option value="Quadrilateral">Quadrilateral</option>
-
                     </select>
                 </div>
-                <br />
-                <!-- shape-specific input fields -->
-                <!--Circle-->
-                <div id="CircleDiv" style="display:none;">
-                    <label>Radius:</label>
-                    <input name="Radius" type="number" min="0" class="form-control" />
-                    <br />
-                     <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-
-                </div>
-                <!--Square-->
-                <div id="SquareDiv" style="display:none;">
-                    <label>Side Length:</label>
-                    <input name="SquareSideLength" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Rectangle-->
-                <div id="RectangleDiv" style="display:none;">
-                    <label>Length:</label>
-                    <input name="Length" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Height of the rectangle:</label>
-                    <input name="Height:" type="number" min="0" class="form-control" />
-                    <br />
-                     <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Triangle-->
-                <div id="TriangleDiv" style="display:none;">
-                    <label>Side Length 1:</label>
-                    <input name="Tr1" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 2:</label>
-                    <input name="Tr2" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 3:</label>
-                    <input name="Tr3" type="number" min="0" class="form-control" />
-                    <br />
-                     <label>Center Values:</label>
-                     <br /><br />
-                     <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                 <!--Pentagon-->
-                <div id="PentagonDiv" style="display:none;">
-                    <label>Side Length:</label>
-                    <input name="PentagonSideLength" type="number" min="0" class="form-control" />
-                    <br />
-                      <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Hexagon-->
-                <div id="HexagonDiv" style="display:none;">
-                    <label>Side Length:</label>
-                    <input name="HexagonSideLength" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Center Values:</label>
-                    <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Heptagon-->
-                <div id="HeptagonDiv" style="display:none;">
-                    <label>Side Length:</label>
-                    <input name="HeptagonSideLength" type="number" min="0" class="form-control" />
-                    <br />
-                     <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Octagon-->
-                <div id="OctagonDiv" style="display:none;">
-                    <label>Side Length:</label>
-                    <input name="OctagonSideLength" type="number" min="0" class="form-control" />
-                    <br />
-                      <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Nonagon-->
-                <div id="NonagonDiv" style="display:none;">
-                    <label>Side Length:</label>
-                    <input name="NonagonSideLength" type="number" min="0" class="form-control" />
-                    <br />
-                     <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Parallelogram-->
-                <div id="ParallelogramDiv" style="display:none;">
-                    <label>Side Length 1:</label>
-                    <input name="Pl1" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 2:</label>
-                    <input name="Pl2" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 3:</label>
-                    <input name="Pl3" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 4:</label>
-                    <input name="Pl4" type="number" min="0" class="form-control" />
-                    <br />
-                      <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Trapezoid-->
-                <div id="TrapezoidDiv" style="display:none;">
-                    <label>Side Length 1:</label>
-                    <input name="Tz1" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 2:</label>
-                    <input name="Tz2" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 3:</label>
-                    <input name="Tz3" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 4:</label>
-                    <input name="Tz4" type="number" min="0" class="form-control" />
-                    <br />
-                      <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Rhombus-->
-                <div id="RhombusDiv" style="display:none;">
-                    <label>Side Length 1:</label>
-                    <input name="Rh1" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 2:</label>
-                    <input name="Rh2" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 3:</label>
-                    <input name="Rh3" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 4:</label>
-                    <input name="Rh4" type="number" min="0" class="form-control" />
-                    <br />
-                      <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div>
-                <!--Quadrilateral-->
-                <div id="QuadrilateralDiv" style="display:none;">
-                    <label>Side Length 1:</label>
-                    <input name="Ql1" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 2:</label>
-                    <input name="Ql2" type="number" min="0" class="form-control" />
-                    <br />
-                    <label>Side Length 3:</label>
-                    <input name="Ql3" type="number" min="0" class="form-control" />c
-                    <br />
-                    <label>Side Length 4:</label>
-                    <input name="Ql4" type="number" min="0" class="form-control" />
-                    <br />
-                      <label>Center Values:</label>
-                     <br /><br />
-                    <label style="display: inline-block; width: 18%; margin-right: 4%; line-height:1;"> X coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " /><span style="display: inline-block; width: 4%;"></span><label style="display: inline-block; width: 18%; line-height:1;">Y coordinate:</label><span style="display: inline-block; width: 4%;"></span><input type="number" class="form-control" style="display: inline-block; width: 18%; " />
-                </div> 
                 <!-- submit button-->
-                <div class="form-group" style="display:none;" id="EnterDiv"><br />
+                <div class="form-group" id="EnterDiv"><br/>
                     <input type="submit" value="Enter" class="btn btn-primary" />
                 </div>
             </form>
@@ -330,6 +163,7 @@
                 <div class="form-group">
                     <input id="inputtext" name="LongTextInput" class="form-control" />
                 </div>
+
                 <!-- submit button-->
                 <br/>
                 <div class="form-group">
@@ -338,10 +172,5 @@
             </form>
         </div>
     </div>
-
-
 </body>
 </html>
-
-
-
