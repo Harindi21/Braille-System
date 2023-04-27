@@ -1,26 +1,63 @@
-﻿@page
+@page
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    Layout = "_LoginLayout";
 }
 
-<h1>@ViewData["Title"]</h1>
+
+<head>
+    @*<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+</head>
+
 <div class="row">
-    <div class="col-md-4">
-        <section>
+    <nav>
+
+        <ul class="navbar-list">
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+
+            <!-- Search for Braille-->
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Braille</a>
+            </li>
+
+            <!-- Search for Braille-->
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Perimeter</a>
+            </li>
+
+            <!-- FAQs -->
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="FAQ" asp-action="FAQAction">FAQs</a>
+            </li>
+        </ul>
+
+        <partial name="_LoginPartial" style="float:right;" />
+
+    </nav>
+       <div class="login-section">
             <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
-                <hr />
+               <p id="title">Log In</p>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                    <label asp-for="Input.Email" class="form-label"></label>
+                <p class="item">
+                    E-mail
+                </p><input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" id="email" />
+                  @*  <label asp-for="Input.Email" class="form-label"></label>*@
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div class="form-floating">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                    <label asp-for="Input.Password" class="form-label"></label>
+                <p class="item">
+                  Password
+                </p> <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" id="pw" />
+                  @*  <label asp-for="Input.Password" class="form-label"></label>*@
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
                 <div>
@@ -32,7 +69,7 @@
                     </div>
                 </div>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                    <button id="loginSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
                 </div>
                 <div>
                     <p>
@@ -46,10 +83,10 @@
                     </p>
                 </div>
             </form>
-        </section>
+        
     </div>
     <div class="col-md-6 col-md-offset-2">
-        <section>
+       @* <section>
             <h3>Use another service to log in.</h3>
             <hr />
             @{
@@ -76,7 +113,7 @@
                     </form>
                 }
             }
-        </section>
+        </section>*@
     </div>
 </div>
 
