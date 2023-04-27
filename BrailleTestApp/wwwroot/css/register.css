@@ -1,0 +1,105 @@
+﻿html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    background-image: url("loginsignupbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+    font-family: 'Arial';
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100%;
+}
+
+
+#fname {
+    width: 459px;
+    height: 40.63px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    margin-bottom:15px;
+}
+
+#lname {
+    width: 459px;
+    height: 40.63px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+#email {
+    width: 459px;
+    height: 40.63px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+#pw {
+    width: 459px;
+    height: 40.63px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+#confpw {
+    width: 459px;
+    height: 40.63px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+#registerSubmit {
+    width: 459px;
+    height: 41px;
+    background: linear-gradient(270deg, #F957A0 24.07%, #E8525F 103.38%);
+    box-shadow: -4px 6px 3px rgba(0, 0, 0, 0.01), -2px 3px 2px rgba(0, 0, 0, 0.05), -1px 1px 2px rgba(0, 0, 0, 0.09), 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+#title {
+    position: absolute;
+    width: 1206px;
+    height: 32px;
+    left: 117px;
+    top: 120px;
+    font-family: 'DM Sans';
+    font-style: normal;
+   padding-bottom:10px;
+    font-size: 54px;
+    line-height: 0px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.item{
+    text-align:left;
+}
+
+.navbar-list {
+    display: inline;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.nav-item {
+    color: #FFFFFF;
+}
+
