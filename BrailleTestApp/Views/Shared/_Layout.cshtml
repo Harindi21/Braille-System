@@ -1,18 +1,33 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BrailleTestApp</title>
-   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <!--montserrat-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .nav-link 
+        {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            margin-top: 26px;
+            margin-right: 40px;
+            margin-left: 42px;
+            font-size: 20px;
+            padding:0px;
+        }
+    </style>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BrailleTestApp.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav  class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3*">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Braille Master</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,25 +36,24 @@
                     <ul class="navbar-nav flex-grow-1">
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <!-- Perimeter-->
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Brailles" asp-action="SearchPerimeter">Perimeter</a>
                         </li>
 
                         <!-- Search for Braille-->
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Braille</a>
-                        </li>
-                        
-                        <!-- Search for Braille-->
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Perimeter</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Braille</a>
                         </li>
 
                         <!-- FAQs -->
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="FAQ" asp-action="FAQAction">FAQs</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Brailles" asp-action="faqs">FAQs</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -52,7 +66,6 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - Braille Master - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
