@@ -1,4 +1,4 @@
-﻿using BrailleTestApp.Models;
+using BrailleTestApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -17,8 +17,19 @@ namespace BrailleTestApp.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult Faqs()
+        {
+            return View();
+        }
+        public IActionResult Help()
+        {
+            return View();
+        }
+        public IActionResult Report()
+        {
+            return View();
+        }
+        public IActionResult TC()
         {
             return View();
         }
