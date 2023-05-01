@@ -1,9 +1,10 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
 <html>
     <head>
     <link rel="stylesheet" href="~/css/Index.css" />
+
     <!--montserrat-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,16 +13,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+       
     </head>
     <body>
-            <div id="sm">
-            <ul id="sm2">
-            <li><img src="~/Images/Jwhite.png" width="26px"></li>
-            <li><img src="~/Images/white.png" width="26px"></li>
-            <li><img src="~/Images/whbite.png" width="26px"></li>
-            <li><img src="~/Images/user(1).png" width="26px"></li>
-            </ul>
-        </div>
             <h3>Braille Master</h3>
             <p class="intro">Braille generative platform for the blind and visually impaired</p>
             <img id="picc" src="~/Images/Group18930.png" width="600px">
@@ -36,9 +30,9 @@
             <h4 class="experience">Experience world’s</h4>
             <p class="most">most convenient opportunity to search for all the possibilities of characters, shapes and texts using one single digital platform </p>
             <ul class="ulc">
-                <li>Report</li>
-                <li>Help</li>
-                <li>Terms and Conditions</li>
+            <li class="good"><a asp-area="" asp-controller="Home" asp-action="Faqs">Help</a></li>
+            <li class="good"><a asp-area="" asp-controller="Home" asp-action="Report">Report</a></li>
+            <li class="good"><a asp-area="" asp-controller="Home" asp-action="TC">Terms and Conditions</a></li>
             </ul>
         </div>
         <div class="cu">
@@ -47,12 +41,18 @@
 
         <div class="smcb">
             <ul class="smcb2">
-            <li><img src="~/Images/facebook(1).png" width="66px"></li>
-            <li><img src="~/Images/instagram(2).png" width="66px"></li>
-            <li><img src="~/Images/whatsapp(3).png" width="66px"></li>
+            <li ><img src="~/Images/facebook(1).png" width="66px"></li>
+            <li ><img src="~/Images/instagram(2).png" width="66px"></li>
+            <li ><img src="~/Images/whatsapp(3).png" width="66px"></li>
             </ul>
         </div>
 
     <div class="tel"> <img src="~/Images/contactbars.png" width=600px;> </div>
     </body>
 </html>
+
+  
+    
+
+
+
