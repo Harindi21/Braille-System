@@ -32,6 +32,33 @@
         {
             margin-left: 1156px;
         }
+        .container, .container a
+        {
+            text-decoration:none;
+            color: #434346;
+        }
+
+        #nav1, #nav2, #nav3, #nav4{
+            color:white;
+        }
+
+        #nav1:hover{
+            color: #FC587E;
+        }
+
+        #nav2:hover {
+            color: #FC587E;
+        }
+
+        #nav3:hover {
+            color: #FC587E;
+        }
+        #nav4:hover{
+            color: #FC587E;
+        }
+       
+       
+
     </style>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -49,24 +76,24 @@
                     <ul class="navbar-nav flex-grow-1">
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a id="nav1" class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <!-- Perimeter-->
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Brailles" asp-action="SearchPerimeter">Perimeter</a>
+                            <a id="nav2" class="nav-link" asp-area="" asp-controller="Brailles" asp-action="SearchPerimeter">Perimeter</a>
                         </li>
 
                         <!-- Search for Braille-->
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Braille</a>
+                            <a id="nav3" class="nav-link" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Braille</a>
                         </li>
 
                         <!-- FAQs -->
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Brailles" asp-action="faqs">FAQs</a>
+                            <a id="nav4" class="nav-link" asp-area="" asp-controller="Home" asp-action="Faqs">FAQs</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -87,7 +114,7 @@
             @RenderBody()
         </main>
     </div>
-    <footer class="border-top footer text-muted">
+    <footer class=" footer text-muted">
         <div class="container">
             &copy; 2023 - Braille Master - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
