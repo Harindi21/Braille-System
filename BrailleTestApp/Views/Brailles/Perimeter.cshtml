@@ -5,24 +5,15 @@
 }
 
 <html>
-<h1>Perimeter</h1>
-<br />
-<head>
 
+
+<head>
+    <link rel="stylesheet" href="~/css/Perimeter.css"/>
     <style>
         .red-text {
             font-size: 12px;
         }
-
-        /*@@media print {
-            .print-button {
-                display: none;
-            }
-
-            .nav-item {
-                display: none;
-            }*/
-        }
+        
     </style>
 </head>
 <body>
@@ -32,7 +23,7 @@
 
     @if (!string.IsNullOrEmpty(ViewData["pr"] as string))
     {
-        <pre style="font-family: Arial, sans-serif; font-size: 99px; ">@Html.Raw(ViewData["pr"] as string)</pre>
+        <pre>@Html.Raw(ViewData["pr"] as string)</pre>
     }
     @*<button class="print-button" onclick=" printPreview()">Print</button>*@
 </body>
