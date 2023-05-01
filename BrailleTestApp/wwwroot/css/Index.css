@@ -1,4 +1,4 @@
-﻿body {
+body {
     background-image: url("jkjk.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,23 +22,6 @@ h3 {
     margin-top: 0px;
     color: white;
     text-align: center;
-}
-
-ul#sm2 li {
-    display: inline;
-    padding-right: 20px;
-}
-
-#sm {
-    float: right;
-    margin-right: -70px;
-    margin-top: -200px;
-}
-
-#pp {
-    float: right;
-    margin-top: 160px;
-    margin-right: 40px;
 }
 
 #picc {
@@ -128,13 +111,17 @@ ul#sm2 li {
     margin-left: -28px;
 }
 
-ul.ulc li {
+.ulc li {
     display: inline;
     padding-right: 42px;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
+.ulc li a {
+        text-decoration: none;
+        color: #434346;
+    }
 
 .cu {
     float: right;
@@ -155,12 +142,14 @@ ul.ulc li {
     width: 41%;
 }
 
-ul.smcb2 li {
+.smcb2 li {
     display: inline;
     padding: 16px;
 }
-
-    ul.smcb2 li img {
+    .good:hover{
+        font-weight:bold;
+    }
+    .smcb2 li img {
         opacity: 0.75;
     }
 
