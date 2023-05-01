@@ -1,0 +1,45 @@
+﻿body {
+    background-image: url("ReportTC.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+main {
+    max-width: 800px;
+    margin:9px auto;
+   
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+form button[type="submit"] {
+    background-color: #FC587E;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+    form button[type="submit"]:hover {
+        background-color: darkred;
+    }
