@@ -1,4 +1,4 @@
-﻿body {
+body {
     background-image: url('spp.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,17 +13,28 @@ h1 {
     font-weight: 700;
 }
 
-#myDropDownList1, #CircleDiv, #SquareDiv, #RectangleDiv, #TriangleDiv, #PentagonDiv, #HexagonDiv, #HeptagonDiv, #OctagonDiv, #NonagonDiv, #ParallelogramDiv, #TrapezoidDiv, #RhombusDiv, #QuadrilateralDiv {
+/*#myDropDownList1, #myDropDownListM, */
+#CircleDiv, #SquareDiv, #RectangleDiv, #TriangleDiv, #PentagonDiv, #HexagonDiv, #HeptagonDiv, #OctagonDiv, #NonagonDiv, #ParallelogramDiv, #TrapezoidDiv, #RhombusDiv, #QuadrilateralDiv {
     width: 50%;
 }
 #CircleDiv, .form-group, #SquareDiv, #RectangleDiv, #TriangleDiv, #PentagonDiv, #HexagonDiv, #HeptagonDiv, #OctagonDiv, #NonagonDiv, #ParallelogramDiv, #TrapezoidDiv, #RhombusDiv, #QuadrilateralDiv {
     margin-top: 22px;
 }
 
+
+
+#myDropDownList1, #myDropDownListM {
+    width: 70%;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #625c5c;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
 #EnterDiv {
     margin-top: -9px;
 }
-
 
 select {
     background-color: #f15d88;
@@ -103,12 +114,7 @@ select {
     text-align: right;
     color: #FFFFFF;
 }
- #myDropDownList1 {
-    width: 20%;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #625c5c;
-}
+
 
 input.form-control {
     width: 40%;
