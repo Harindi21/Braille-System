@@ -443,81 +443,81 @@ namespace BrailleTestApp
             if (name == "Circle")
             {
                 double p = 2 * 3.14 * Convert.ToDouble(radius);
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Square")
             {
                 double p = Convert.ToDouble(sideLength) * 4;
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Rectangle")
             {
                 double p = (Convert.ToDouble(length) * 2) + (Convert.ToDouble(height) * 2);
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
 
             else if(name == "Triangle")
             {
                 double p = (Convert.ToDouble(tr1)) + (Convert.ToDouble(tr2)) + (Convert.ToDouble(tr3));
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
 
             else if(name == "Pentagon")
             {
                 double p = (Convert.ToDouble(pentL)) * 5;
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Hexagon")
             {
                 double p = (Convert.ToDouble(hexL)) * 6;
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Heptagon")
             {
                 double p = (Convert.ToDouble(heptL)) * 7;
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Octagon")
             {
                 double p = (Convert.ToDouble(octL)) * 8;
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Nonagon")
             {
                 double p = (Convert.ToDouble(nongL)) * 9;
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Trapezoid")
             {
                 double p = (Convert.ToDouble(Tz1)) + (Convert.ToDouble(Tz2)) + (Convert.ToDouble(Tz3)) + (Convert.ToDouble(Tz4));
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Rhombus")
             {
                 double p = (Convert.ToDouble(Rh1)) + (Convert.ToDouble(Rh2)) + (Convert.ToDouble(Rh3)) + (Convert.ToDouble(Rh4));
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if(name == "Parallelogram")
             {
                 double p = (Convert.ToDouble(Pl1)) + (Convert.ToDouble(Pl2)) + (Convert.ToDouble(Pl3)) + (Convert.ToDouble(Pl4));
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else if (name == "Quadrilateral")
             {
                 double p = (Convert.ToDouble(Ql1)) + (Convert.ToDouble(Ql2)) + (Convert.ToDouble(Ql3)) + (Convert.ToDouble(Ql4));
-                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + "\n</span>";
+                string p2 = "<span class='red-text'>Perimeter: " + p.ToString() + " cm\n</span>";
                 return p2;
             }
             else
