@@ -18,8 +18,9 @@
     <div class="row1">
         <div class="col-mid-4">
             <form asp-action="Perimeter">
-                <div class="form-group">
-                    <label>Select a shape:</label>
+                <div class="form-group" style="width:700px;">
+                    <div style="display:inline-block; width:400px;">
+                        <label for="myDropDownList1">Select a shape:</label>
                     <select size="1" class="form-control" name="ShapeListp" id="myDropDownList1" onchange="showHideFields()">
                         <option value="Circle">Circle</option>
                         <option value="Square">Square</option>
@@ -35,12 +36,24 @@
                         <option value="Rhombus">Rhombus</option>
                         <option value="Quadrilateral">Quadrilateral</option>
                     </select>
-                </div>
+                    </div>
 
+                <div class="newdiv" style="display:inline-block; margin-left: 10px; width:220px;">
+                        <label for="myDropDownListM">Measure:</label>
+                <select size="1" class="form-control" name="MeasureList" id="myDropDownListM" onchange="showHideFields()">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                            <option value="mm">mm</option>
+                            <option value="km">km</option>
+                            <option value="ft">ft</option>
+                            <option value="in">in</option>
+                            <option value="yd">yd</option>
+                </select>
+                </div>
                 <!-- shape-specific input fields -->
                 <!--Circle-->
                 <div id="CircleDiv" style="display:none;">
-                    <label>Radius:</label>
+                    <label>Radius (cm):</label>
                     <input name="Radius" type="number" min="0" class="form-control" />
                     <br />
                     @*    <label>Center Values:</label>
