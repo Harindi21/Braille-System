@@ -1,13 +1,13 @@
-﻿body {
+body {
     background-image: url('periopbg.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .red-text {
     font-size: 50px;
     font-weight: bold;
     font-family: Montserrat, sans-serif;
-    border: 1px dashed #fff;
     width: 500px;
     height: 200px;
     background-color: transparent;
@@ -16,7 +16,6 @@
     top: 50%;
     transform: translate(-110%, -90%);
     color: #fff;
-    border: 1px dashed #fff;
     border-radius: 8px;
     box-sizing: border-box;
     display: flex;
