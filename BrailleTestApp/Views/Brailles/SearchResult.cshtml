@@ -4,38 +4,20 @@
     ViewData["Title"] = "SearchResult";
 }
 <html>
-<h1 id="heading">Braille character sequence  </h1>
+<h1>Braille character sequence  </h1>
 <br />
 <head>
-
-    <style>
-        .red-text 
-        {
-            font-size: 12px;
-        }
-
-        @@media print 
-        {
-            .print-button
-            {
-                 display: none;
-            }
-
-            .nav-item
-            {
-                display: none;
-            }
-        }
-  </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="~/css/SearchResult.css" />
 </head>
 <body>
-
    <br />
     <div>@Html.Raw(Model)</div>
-
         @if (!string.IsNullOrEmpty(ViewData["DotPattern"] as string))
         {
-        <pre  style="font-family: Arial, sans-serif; font-size: 99px; ">@Html.Raw(ViewData["DotPattern"] as string)</pre>
+        <pre  style="font-size: 120px; color:white; margin-top:-40px;">@Html.Raw(ViewData["DotPattern"] as string)</pre>
         }
     <button class="print-button" onclick=" printPreview()">Print</button>
 </body>
