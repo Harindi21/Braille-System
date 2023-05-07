@@ -15,7 +15,7 @@
             font-weight: 500;
             margin-top: 26px;
             margin-right: 40px;
-            margin-left: 42px;
+            margin-left: 40px;
             font-size: 20px;
             padding:0px;
         }
@@ -27,18 +27,18 @@
         .circles
         {
             margin-left:32px;
+            margin-top: -12px;
         }
         .pic
         {
-            margin-left: 1156px;
+            margin-left: 1188px;
         }
         .container, .container a
         {
             text-decoration:none;
             color: #434346;
         }
-
-        #nav1, #nav2, #nav3, #nav4, #reg, #logn{
+        #nav1, #nav2, #nav3, #nav4{
             color:white;
         }
 
@@ -103,10 +103,10 @@
     </header>
     <div >
         <ul class="circles">
-            <li><img src="~/Images/white.png" width="32px"></li>
-            <li><img src="~/Images/whbite.png" width="32px" /></li>
-            <li><img src="~/Images/Jwhite.png" width="32px"></li>
-            <li class="pic"><img src="~/Images/user(1).png" width="32px"></li>
+            <li><img src="~/Images/white.png" width="28px"></li>
+            <li><img src="~/Images/whbite.png" width="28px" /></li>
+            <li><img src="~/Images/Jwhite.png" width="28px"></li>
+            @*<li class="pic"><img src="~/Images/user(1).png" width="28px"></li>*@
         </ul>
     </div>
     <div class="container">
@@ -114,11 +114,11 @@
             @RenderBody()
         </main>
     </div>
-    <footer class=" footer text-muted">
+   @* <footer class="footer text-muted">
         <div class="container">
             &copy; 2023 - Braille Master - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
