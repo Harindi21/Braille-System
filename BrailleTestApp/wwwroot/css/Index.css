@@ -9,7 +9,7 @@ h3 {
     font-weight: 700;
     font-size: 90px;
     letter-spacing: -1px;
-    margin-top: 220px;
+    margin-top: 180px;
     margin-bottom: auto;
     text-align: center;
     color: white;
@@ -19,14 +19,15 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 22px;
-    margin-top: 0px;
+    margin-top: 4px;
     color: white;
     text-align: center;
 }
 
 #picc {
-    margin-top: 560px;
+    margin-top: 520px;
     margin-left: 80px;
+    position:relative;
 }
 
 .text1 {
@@ -159,3 +160,10 @@ h3 {
     margin-top: -600px;
     width: 31%;
 }
+
+.pic {
+    padding-right: 16px;
+    margin-top: -16px;
+    margin-left: 1281px;
+}
+
