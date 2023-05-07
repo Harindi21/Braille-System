@@ -1,0 +1,137 @@
+﻿body {
+    background-image: url('spp.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin-left: 0px;
+    font-size: 28px;
+    margin-top: 56px;
+    font-weight: 700;
+}
+
+#myDropDownList1, #CircleDiv, #SquareDiv, #RectangleDiv, #TriangleDiv, #PentagonDiv, #HexagonDiv, #HeptagonDiv, #OctagonDiv, #NonagonDiv, #ParallelogramDiv, #TrapezoidDiv, #RhombusDiv, #QuadrilateralDiv {
+    width: 50%;
+}
+#CircleDiv, .form-group, #SquareDiv, #RectangleDiv, #TriangleDiv, #PentagonDiv, #HexagonDiv, #HeptagonDiv, #OctagonDiv, #NonagonDiv, #ParallelogramDiv, #TrapezoidDiv, #RhombusDiv, #QuadrilateralDiv {
+    margin-top: 22px;
+}
+
+#EnterDiv {
+    margin-top: -9px;
+}
+
+
+select {
+    background-color: #f15d88;
+    color: #434346;
+    border: none;
+    padding: 5px;
+    color: white;
+    font-size: 6px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    select option {
+        background-color: #434346;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+    }
+
+    select option:hover {
+            cursor: pointer;
+            color: white;
+    }
+
+    select::-ms-expand {
+        color: #f15d88;
+    }
+      
+}
+#EnterDiv input {
+    background-color: #f15d88;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    width:100px;
+    padding:0px;
+}
+
+
+.content pre {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 44px;
+    color: #fff;
+    text-align: right;
+}
+
+.content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 20px;
+    color: #fff;
+    text-align: right;
+    margin-top: 8%;
+}
+
+    .content h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 41px;
+        line-height: 42px;
+        color: #fff;
+        text-align: right;
+    }
+
+.content {
+    position: absolute;
+    width: 680px;
+    height: 368px;
+    left: 742px;
+    top: 211px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    line-height: 40px;
+    /* or 175% */
+    text-align: right;
+    color: #FFFFFF;
+}
+ #myDropDownList1 {
+    width: 20%;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #625c5c;
+}
+
+input.form-control {
+    width: 40%;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #625c5c;
+    margin-bottom: 0px;
+}
+label {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.btn-primary {
+    background-color: #FC587E;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: darkred;
+    }
+
+
