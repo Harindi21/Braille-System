@@ -9,7 +9,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: aliceblue;
-    font-family: 'Arial';
+    font-family: 'Montserrat', sans-serif;
 }
 
 .col-md-4 {
@@ -104,7 +104,16 @@ body {
     color: #FFFFFF;
 }
 
-.existing-user-login{
-    color:white;
+#existinglogin {
+    color: white;
+    text-decoration:underline;
 }
 
+#last {
+    color: white;
+    font-size:larger;
+}
+
+.img{
+    padding:13px;
+}

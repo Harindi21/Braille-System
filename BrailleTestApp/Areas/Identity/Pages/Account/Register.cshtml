@@ -36,11 +36,11 @@
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Create account</button>
-            <a class="existing-user-login" asp-area="" asp-controller="Account" asp-action="Login">Already have an account? Log in</a>
-            <p>Or continue with</p>
-            <img src="/css/google.png" alt="Description of image">
-            <img src="/css/linkedin.png" alt="Description of image">
-            <img src="/css/fb.png" alt="Description of image">
+            <a id="existinglogin"class="existing-user-login" asp-area="" asp-controller="Account" asp-action="Login">Already have an account? Log in</a>
+            <p id="last">Or continue with</p>
+            <img class="img" src="/css/google.png" alt="Description of image">
+            <img class="img" src="/css/linkedin.png" alt="Description of image">
+            <img class="img" src="/css/fb.png" alt="Description of image">
 
         </form>
 
