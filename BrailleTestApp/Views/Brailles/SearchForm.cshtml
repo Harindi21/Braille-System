@@ -1,20 +1,26 @@
 <html>
 <head>
+    <link rel="stylesheet" href="~/css/SearchForm.css" />
+    <!--montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+   
 </head>
 <body>
    <!-- <script language="JavaScript" src="~/js/shapeParamters.js"></script>
            No need to use a link when the js code is in site.js. It's possible that the site.js file is being loaded without an explicit reference in cshtml views.
     it happens if the file is being loaded by another JavaScript file that is referenced in your views, / if it's being loaded by a layout file that is used by all the views in your application.
    -->
-    <h4>Search for Braille Dot Patterns</h4>
-    <hr />
-    <h5>Search for Shapes</h5>
+    <h1>Generate Braille</h1>
+
     <div class="row1">
+        <h5>For Shapes</h5>
         <div class="col-md-4">
             <form asp-action="SearchResult">
                 <!-- action-->
                 <div class="form-group">
-                    <select size="9" class="form-control" name="ShapeList" id="myDropDownList1" onchange="showHideFields()">
+                    <select size="1" class="form-control" name="ShapeList" id="myDropDownList1" onchange="showHideFields()">
                         <option value="Circle">Circle</option>
                         <option value="Square">Square</option>
                         <option value="Triangle">Triangle</option>
@@ -39,14 +45,14 @@
     </div>
 
     <br />
-    <h5>Search for Characters</h5>
+    <h5>For Characters</h5>
     <!-- drop down list for characters-->
     <div class="row2">
         <div class="col-md-4">
             <form asp-action="SearchResult" name="CharacterList" id="characterForm">
                 <!-- action-->
                 <div class="form-group">
-                    <select size="12" name="CharacterList" class="form-control" id="myDropDownList2">
+                    <select size="1" name="CharacterList" class="form-control" id="myDropDownList2">
                         <option value="A">A</option>
                         <option value="a">a</option>
                         <option value="B">B</option>
@@ -155,13 +161,13 @@
     </div>
 
     <br />
-    <h5>Enter text to generate Braille</h5>
+    <h5>For any text</h5>
     <!-- input field for characters-->
     <div class="row3">
         <div class="col-md-4">
             <form asp-action="SearchResult">
                 <div class="form-group">
-                    <input id="inputtext" name="LongTextInput" class="form-control" />
+                    <input style="background-color: #625c5c;" id="inputtext" name="LongTextInput" class="form-control" />
                 </div>
 
                 <!-- submit button-->
@@ -171,6 +177,18 @@
                 </div>
             </form>
         </div>
+    </div>
+     <div class="content">
+
+
+       <p>                        Go search</p>
+        <h2>braille pattern sequence</h2>
+        <pre><span style="font-size:21px;">for any thing you are searching for</span>
+      You can generate braille pattern sequences
+         for any mathematical shape, character or
+      custom text that you input as you wish with
+    these three category fields
+                                                   </pre>
     </div>
 </body>
 </html>
