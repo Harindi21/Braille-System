@@ -10,23 +10,26 @@
 
     padding-top:0px;
 }
-.content {
-    color: #f1f1f1; 
+.para1 {
+    color: #f1f1f1;
+    text-align: center;
+    justify-content: center;
 }
-    .content h3 {
+    .para1 h3 {
         font-weight: 700;
         font-size: 26px;
     }
-    .content pre {
+    .para pre {
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        font-size: 20px;
-        line-height: 16px;
+        font-size: 20px; 
         color: #fff;
         text-align: center;
     }
+
 pre {
     border: none;
-    outline: none;margin:0;
+    outline: none;
+    margin:0;
     padding:0;
 }
