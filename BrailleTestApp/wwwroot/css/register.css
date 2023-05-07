@@ -3,6 +3,10 @@
     min-height: 100%;
 }
 
+.btn-primary
+{
+    border:none;
+}
 
 body {
     background-image: url("loginsignupbg.png");
