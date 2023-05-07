@@ -87,6 +87,7 @@ body {
 }
 .item{
     text-align:left;
+    color:white;
 }
 
 .navbar-list {
@@ -101,5 +102,9 @@ body {
 
 .nav-item {
     color: #FFFFFF;
+}
+
+.existing-user-login{
+    color:white;
 }
 

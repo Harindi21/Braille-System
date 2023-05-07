@@ -1,79 +1,38 @@
-
 @page
 @model RegisterModel
 
-@{
-    Layout = "_RegisterLayout";
-}
+
 <head>
-    @*<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*
     <link rel="stylesheet" href="~/css/register.css" asp-append-version="true" />
 </head>
 
-
-    
-
-<div class="row">
-   
-        <nav>
-        
-            <ul class="navbar-list">
-
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                </li>
-
-                <!-- Search for Braille-->
-
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Braille</a>
-                </li>
-
-                <!-- Search for Braille-->
-
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Brailles" asp-action="SearchForm">Perimeter</a>
-                </li>
-
-                <!-- FAQs -->
-
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="FAQ" asp-action="FAQAction">FAQs</a>
-                </li>
-            </ul>
-            
-                <partial name="_LoginPartial" style ="float:right;"/>
-
-        </nav>
-    
-    
-   
-    <div class="col-md-4">
+<div class="col-md-4">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <p id="title">Sign Up</p>
-            
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @* added new input fields to the form (5)*@
+            
             <div class="form-floating">
                 <p class="item">First Name</p><input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" id="fname" />
-                @*<label asp-for="Input.FirstName"></label>*@
+               
                 <span asp-validation-for="Input.FirstName" class="text-danger"></span>
-            
+
                 <p class="item">
                     Last name</p><input asp-for="Input.LastName" class="form-control" autocomplete="lastname" aria-required="true" id="lname" />
-               @* <label asp-for="Input.LastName"></label>*@
+               
                 <span asp-validation-for="Input.LastName" class="text-danger"></span>
-            
+
                 <p class="item">E-mail</p><input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" id="email" />
-               @* <label asp-for="Input.Email"></label>*@
+              
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
-        
+
                 <p class="item">Password</p><input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" id="pw" />
-                @*<label asp-for="Input.Password"></label>*@
+               
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
-            
+
                 <p class="item">Confirm Password</p><input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" id="confpw" />
-                @*<label asp-for="Input.ConfirmPassword"></label>*@
+               
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Create account</button>
@@ -82,15 +41,15 @@
             <img src="/css/google.png" alt="Description of image">
             <img src="/css/linkedin.png" alt="Description of image">
             <img src="/css/fb.png" alt="Description of image">
-       
+
         </form>
-       
-            
+
+
     </div>
     @*<div class="col-md-6 col-md-offset-2">*@
-        @*<section>
+@*<section>
            <h3>Use another service to register.</h3>
-           
+
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {
@@ -117,9 +76,9 @@
                     </form>
                 }
             }
-        </section>*@
-   @* </div>*@
-</div>
+        </section>
+    </div>*@
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
