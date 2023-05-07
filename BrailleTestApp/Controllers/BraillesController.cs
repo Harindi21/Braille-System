@@ -69,11 +69,11 @@ namespace BrailleTestApp.Controllers
             return View();
         }
 
-        public IActionResult Perimeter(String ShapeListp, String Radius, String SquareSideLength, String Length, String Height, String Tr1, String Tr2, String Tr3, String PentagonSideLength, String HeptagonSideLength, String HexagonSideLength, String OctagonSideLength, String NonagonSideLength, String Pl1, String Pl2, String Pl3, String Pl4, String Tz1, String Tz2, String Tz3, String Tz4, String Rh1, String Rh2, String Rh3, String Rh4, String Ql1, String Ql2, String Ql3, String Ql4)
+        public IActionResult Perimeter(String ShapeListp, String MeasureList, String Radius, String SquareSideLength, String Length, String Height, String Tr1, String Tr2, String Tr3, String PentagonSideLength, String HexagonSideLength, String HeptagonSideLength, String OctagonSideLength, String NonagonSideLength, String Pl1, String Pl2, String Pl3, String Pl4, String Tz1, String Tz2, String Tz3, String Tz4, String Rh1, String Rh2, String Rh3, String Rh4, String Ql1, String Ql2, String Ql3, String Ql4)
         {
             Pattern obj = new Pattern();
 
-            string pr = obj.ShapePerimeters(ShapeListp, Radius, SquareSideLength, Length, Height, Tr1, Tr2, Tr3, PentagonSideLength, HeptagonSideLength, HexagonSideLength, OctagonSideLength, NonagonSideLength, Pl1, Pl2, Pl3, Pl4, Tz1, Tz2, Tz3, Tz4, Rh1, Rh2, Rh3, Rh4, Ql1, Ql2, Ql3, Ql4);
+            string pr = obj.ShapePerimeters(ShapeListp, MeasureList, Radius, SquareSideLength, Length, Height, Tr1, Tr2, Tr3, PentagonSideLength, HexagonSideLength, HeptagonSideLength, OctagonSideLength, NonagonSideLength, Pl1, Pl2, Pl3, Pl4, Tz1, Tz2, Tz3, Tz4, Rh1, Rh2, Rh3, Rh4, Ql1, Ql2, Ql3, Ql4);
 
             ViewData["pr"] = pr;
             return View("Perimeter");
